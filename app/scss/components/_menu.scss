@@ -1,0 +1,35 @@
+.menu {
+    display: grid;
+    justify-content: center;
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    color: var(--first-color-600);
+
+    margin-top: 10rem;
+}
+
+.menu__link {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    
+    width: 100%;
+    padding: 1rem 2.5rem;
+    border-radius: 5px;
+    
+    transition: 0.3s;
+    cursor: pointer;
+   
+    &:hover {
+        background: var(--first-color-400);
+        color: var(--third-color-100);
+    }
+}
