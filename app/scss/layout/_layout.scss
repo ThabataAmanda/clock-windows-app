@@ -1,10 +1,19 @@
 @use '../config/' as config;
 
+.main {
+  height: 100vh;
+}
+
 .container {
-  max-width: 1440px;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  // max-width: 1440px;
+  // margin-left: 1.5rem;
+  // margin-right: 1.5rem;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr;
   
+  height: 100%;
+
   @include config.breakpoint-up(bigger) {
     margin-left: auto;
     margin-right: auto;

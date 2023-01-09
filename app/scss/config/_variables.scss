@@ -6,6 +6,7 @@
   --first-color-300: #323232;
   --first-color-400: #333333;
   --first-color-500: #3E3E3E;
+  --first-color-600: #757378;
   
   --second-color: #76B9ED;
   
@@ -31,27 +32,27 @@
   --z-tooltip: 10;
 }
 
-@include querie.breakpoint-down(small) {
-  :root {
-    --h2-font-size: 2.8rem;
-  }
-}
+// @include querie.breakpoint-down(small) {
+//   :root {
+//     --h2-font-size: 2.8rem;
+//   }
+// }
 
-@include querie.breakpoint-up(small) {
-  :root {
-    --h1-font-size: 5rem;
-  }
-}
+// @include querie.breakpoint-up(small) {
+//   :root {
+//     --h1-font-size: 5rem;
+//   }
+// }
 
-@include querie.breakpoint-up(large) {
-  :root {
-    --h1-font-size: 7rem;
-    --h2-font-size: 6.4rem;
-    --h3-font-size: 4.8rem;
-    --h4-font-size: 3.2rem;
-    --hight-font-size: 2.4rem;
-    --medium-font-size: 3.2rem;
-    --normal-font-size: 1.6rem;
-    --small-font-size: 2rem;
-  }
-}
+// @include querie.breakpoint-up(large) {
+//   :root {
+//     --h1-font-size: 7rem;
+//     --h2-font-size: 6.4rem;
+//     --h3-font-size: 4.8rem;
+//     --h4-font-size: 3.2rem;
+//     --hight-font-size: 2.4rem;
+//     --medium-font-size: 3.2rem;
+//     --normal-font-size: 1.6rem;
+//     --small-font-size: 2rem;
+//   }
+// }
