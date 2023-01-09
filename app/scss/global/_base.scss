@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+a,
+a::visited,
+a::active {
+  text-decoration: none;
+}
+
+input, textarea {
+  display: block;
+  font-family: var(--body-font);
+}
+
+button {
+  font-family: var(--body-font);
+  outline: none;
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

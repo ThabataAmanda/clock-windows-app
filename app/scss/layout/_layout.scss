@@ -1,0 +1,12 @@
+@use '../config/' as config;
+
+.container {
+  max-width: 1440px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  
+  @include config.breakpoint-up(bigger) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
