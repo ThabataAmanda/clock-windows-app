@@ -1,35 +1,96 @@
-.menu {
-    display: grid;
-    justify-content: center;
+@use '../config/' as config;
+
+.nav__menu {
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: -100%;
+	height: 100%;
+	width: calc(100% - 5rem);
+
+	background-color: var(--first-color-100);
+	transition: .3s;
+
+	.menu__list {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+
+		color: var(--first-color-600);
+		margin-top: 10rem;
+		margin-left: 1.5rem;
+	}
+
+	.menu__item {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		width: 25rem;
+
+		font-size: var(--medium-font-size);
+		font-weight: var(--font-medium);
+		border-radius: 0.3rem;
+		padding: 1.2rem 1.5rem;
+
+		transition: 0.2s;
+		cursor: pointer;
+
+		.menu__link {
+			transition: 0.2s;
+		}
+
+		&:hover {
+			background: var(--first-color-400);
+
+			.menu__link {
+				color: var(--third-color-100);
+			}
+		}
+	}
+
+	&.show-menu {
+		visibility: visible;
+		left: 0;
+	}
 }
 
-.menu__list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+.menu__open {
+	position: absolute;
+	top: 1rem;
+	left: 2.5rem;
 
-    color: var(--first-color-600);
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
+	padding: 10px 0;
+	cursor: pointer;
 
-    margin-top: 10rem;
-}
+	@include config.breakpoint-up(large) {
+		display: none;
+	}
+	
+	span {
+		display: block;
+		width: 30px;
+		height: 3px;
+		background-color: var(--first-color-700);
+		border-radius: 5px;
+		-webkit-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
 
-.menu__link {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
-    
-    width: 100%;
-    padding: 1rem 2.5rem;
-    border-radius: 5px;
-    
-    transition: 0.3s;
-    cursor: pointer;
-   
-    &:hover {
-        background: var(--first-color-400);
-        color: var(--third-color-100);
-    }
+	&.active {
+		.line:nth-child(2) {
+			opacity: 0;
+		}
+
+		.line:nth-child(1) {
+			@include config.transform(45, translate(0px, 8px));
+		}
+
+		.line:nth-child(3) {
+			@include config.transform(-45, translate(0px, -8px));
+		}
+	}
 }

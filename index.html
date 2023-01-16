@@ -6,46 +6,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./dist/style.min.css">
   <title>Clock Windows - App</title>
 </head>
 <body>    
-  <div class="main">
-    <div class="container">
-      <section class="menu">
-        <ul class="menu__list">
-          <li class="menu__link">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav__menu" data-js="menu-nav">
+        <ul class="menu__list" data-js="menu-list">
+          <li class="menu__item" data-js="menu-item">
             <img src="./app/img/clock.svg" alt="">
-            Relógio
+            <a href="#" class="menu__link">Relógio</a>
           </li>
-          <li class="menu__link">
+          <li class="menu__item" data-js="menu-item">
             <img src="./app/img/alarm.svg" alt="">
-            Alarme
+            <a href="#" class="menu__link">Alarme</a>
           </li>
-          <li class="menu__link">
+          <li class="menu__item" data-js="menu-item">
             <img src="./app/img/timer.svg" alt="">
-            Cronômetro
+            <a href="#" class="menu__link">Cronômetro</a>
           </li>
-          <li class="menu__link">
+          <li class="menu__item" data-js="menu-item">
             <img src="./app/img/stopwatch.svg" alt="">
-            Temporizador
+            <a href="#" class="menu__link">Temporizador</a>
           </li>
-          <li class="menu__link">
+          <li class="menu__item" data-js="menu-item">
             <img src="./app/img/tomate.svg" alt="">
-            Pomodoro
+            <a href="#" class="menu__link">Pomodoro</a>
           </li>
-          <li class="menu__link">
+          <li class="menu__item" data-js="menu-item">
             <img src="./app/img/world.svg" alt="">
-            Relógio Mundial
+            <a href="#" class="menu__link">Relógio Mundial</a>
           </li>
         </ul>
-      </section>
+      </div>
 
-      <section class="content">
-        
-      </section>
-    </div>
+      <div class="menu__open" data-js="menu-toggle">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </nav>
+
+    <main class="content">
+      
+    </main>
   </div>
+
+  <script src="./app/js/main.js"></script>
 </body>
 </html>
