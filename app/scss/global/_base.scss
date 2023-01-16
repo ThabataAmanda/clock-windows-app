@@ -15,7 +15,7 @@ html {
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--first-color-100);
+  background-color: var(--first-color-200);
 }
 
 a,
@@ -37,6 +37,11 @@ button {
 
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--first-color-600);
 }
 
 img {
