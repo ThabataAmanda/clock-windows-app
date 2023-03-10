@@ -25,16 +25,15 @@
 <br>
 
 ## 🚀 Tecnologias
-
-<!-- Esse projeto está sendo desenvolvido com as seguintes tecnologias:
+Esse projeto está sendo desenvolvido com as seguintes tecnologias:
 
 - HTML
 - Sass
-- JavaScript -->
+- JavaScript 
 
 ## 🚧 Projeto:
+Link do Projeto: <a href="https://clock-windows-app.netlify.app">Aqui</a>
 
-<!-- Link do Projeto: [Construction - Real State](https://construction-real-state-rogersanttoss.netlify.app) -->
 
 <!-- <p>:heavy_check_mark: Mobile</p>
 <p>:construction: Desktop</p> -->
