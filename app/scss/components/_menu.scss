@@ -17,6 +17,7 @@
 		visibility: visible;
 		left: 0;
 		width: 30rem;
+		padding: 0 2rem;
 	}
 
 	.menu__list {
@@ -36,6 +37,7 @@
 		display: flex;
 		align-items: center;
 		gap: 1.5rem;
+		width: 100%;
 
 		font-size: var(--medium-font-size);
 		font-weight: var(--font-medium);
@@ -45,8 +47,7 @@
 		transition: all 0.2s;
 		cursor: pointer;
 
-		.menu__link,
-		svg path {
+		.menu__link, svg path {
 			transition: 0.2s;
 		}
 
@@ -77,7 +78,7 @@
 	flex-direction: column;
 	row-gap: 0.5rem;
 	padding: 1rem 0;
-	margin-left: 1rem;
+	left: 2rem;
 	z-index: var(--z-fixed);
 	cursor: pointer;
 

@@ -1,7 +1,18 @@
+@use '../config/queries' as config;
+
 .alarm__container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+
+  @include config.breakpoint-up(large) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include config.breakpoint-up(xxl) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 .alarm__card {

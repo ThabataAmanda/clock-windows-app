@@ -1,4 +1,12 @@
+@use '../config/' as config;
+
 .content {
-    margin-top: 10rem;
+    // margin-top: 10rem;
+    padding: 0 2rem;
     background: var(--first-color-200);
+
+    @include config.breakpoint-up(medium) {
+        margin-top: 10rem;
+        padding: 0 6rem;
+    }
 }

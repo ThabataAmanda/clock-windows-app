@@ -1,13 +1,25 @@
 @use '../config/' as config;
 
-.main {
-  height: 100vh;
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 6rem 1fr;
+  row-gap: 4rem;
+  
+  max-width: 100%;
+  height: 100%;
+
+  @include config.breakpoint-up(medium) {
+    grid-template-columns: 30rem 1fr;
+    grid-template-rows: auto;
+  }
+
+  @include config.breakpoint-up(xxl) {
+    height: 100vh;
+  }
 }
 
-.container {
-  // display: grid;
-  // grid-template-columns: 300px auto;
-  max-width: 100%;
+.main {
   height: 100vh;
-  padding: 0 1.5rem;
 }
