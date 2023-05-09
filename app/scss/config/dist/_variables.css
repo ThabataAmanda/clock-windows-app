@@ -1,0 +1,27 @@
+:root {
+  --first-color-100: #202020;
+  --first-color-200: #272727;
+  --first-color-300: #323232;
+  --first-color-400: #333333;
+  --first-color-500: #3E3E3E;
+  --first-color-600: #757378;
+  --second-color: #76B9ED;
+  --third-color-100: #FFFFFF;
+  --third-color-200: #E6E6E6;
+  --body-font: "Inter", sans-serif;
+  --hour: 10.7rem;
+  --h1-font-size: 3.6rem;
+  --h2-font-size: 3.2rem;
+  --h3-font-size: 2.4rem;
+  --h4-font-size: 2.4rem;
+  --hight-font-size: 1.8rem;
+  --medium-font-size: 1.8rem;
+  --normal-font-size: 1.4rem;
+  --small-font-size: 1.2rem;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --z-fixed: 100;
+  --z-tooltip: 10;
+}

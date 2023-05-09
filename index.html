@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +11,8 @@
   <link rel="stylesheet" href="./dist/style.min.css">
   <title>Clock Windows - App</title>
 </head>
-<body>    
+
+<body>
   <div class="main">
     <div class="container">
       <section class="menu">
@@ -43,9 +45,33 @@
       </section>
 
       <section class="content">
-        
+        <section class="pomodoro">
+          <div class="top-bottons">
+            <span class="top-buttons__pomodoro top-buttons__pomodoro_selected" data-js="button-pomodoro">Pomodoro</span>
+            <span class="top-buttons__short-break" data-js="button-short-break">Pausa Curta</span>
+            <span class="top-buttons__long-break" data-js="button-long-break">Pausa Longa</span>
+          </div>
+
+          <div class="container-time" data-js="container-pomodoro">
+            <span class="time">25:00</span>
+            <span class="button-start">Start</span>
+          </div>
+
+          <div class="container-time container-time_hidden" data-js="container-short-break">
+            <span class="time">5:00</span>
+            <span class="button-start">Start</span>
+          </div>
+
+          <div class="container-time container-time_hidden" data-js="container-long-break">
+            <span class="time">15:00</span>
+            <span class="button-start">Start</span>
+          </div>
+        </section>
       </section>
     </div>
   </div>
+
+  <script src="/app/js/pomodoro.js"></script>
 </body>
+
 </html>
