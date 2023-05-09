@@ -2,6 +2,8 @@
   Clock Windows - Application
 </h1>
 
+![capa clock](https://user-images.githubusercontent.com/63726379/224445316-f3d530a3-01fc-4daa-ab65-e6245846a5da.png)
+
 <p align="center">
   <!-- <img alt="" src="./app/img/preview-git.jpg" width="100%"> -->
 </p>
@@ -23,16 +25,15 @@
 <br>
 
 ## 🚀 Tecnologias
-
-<!-- Esse projeto está sendo desenvolvido com as seguintes tecnologias:
+Esse projeto está sendo desenvolvido com as seguintes tecnologias:
 
 - HTML
 - Sass
-- JavaScript -->
+- JavaScript 
 
 ## 🚧 Projeto:
+Link do Projeto: <a href="https://clock-windows-app.netlify.app">Aqui</a>
 
-<!-- Link do Projeto: [Construction - Real State](https://construction-real-state-rogersanttoss.netlify.app) -->
 
 <!-- <p>:heavy_check_mark: Mobile</p>
 <p>:construction: Desktop</p> -->

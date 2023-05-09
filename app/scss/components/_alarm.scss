@@ -1,0 +1,104 @@
+@use '../config/queries' as config;
+
+.alarm__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  @include config.breakpoint-up(large) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include config.breakpoint-up(xxl) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.alarm__card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  background: var(--first-color-300);
+  border-radius: 1rem;
+  padding: 1.5rem;
+
+  .card__content {
+    h1 {
+      font-size: var(--h1-font-size);
+      margin-bottom: 0.5rem;
+
+      span {
+        display: inline-block;
+        font-size: 1.8rem;
+        font-weight: var(--font-bold);
+      }
+    }
+  
+    span {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      gap: 1rem;
+    }
+  
+    h2 {
+      margin-bottom: 1.5rem;
+      font-size: var(--h2-font-size);
+    }
+  }
+
+  .card__weekdays {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 1 / -1;
+    justify-content: space-between;
+    gap: 1rem;
+
+    span {
+      flex: 1;
+      text-align: center;
+      
+      background: var(--first-color-500);
+      border-radius: 5px;
+      padding: 3px 5px;
+    }
+  }
+}
+
+.card__icon input {
+  position: relative;
+  height: 18px;
+  width: 40px;
+  background-color: var(--first-color-100);
+  outline: none;
+  border-radius: 20px;
+  appearance: none;
+  -webkit-appearance: none;
+  // pointer-events: none;
+  transition: .3s;
+  border: 1px solid var(--first-color-600);
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    height: 14px;
+    width: 14px;
+    border-radius: 20px;
+    background-color: var(--first-color-600);
+    transform: translateY(-50%) scale(0.85);
+    transition: .3s;
+  }
+
+  &:checked {
+    background-color: var(--second-color);
+    border: 1px solid var(--second-color);
+
+    &:before {
+      left: 23px;
+      background-color: var(--first-color-300);
+    }
+  }
+}

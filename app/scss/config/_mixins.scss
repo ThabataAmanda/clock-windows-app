@@ -1,0 +1,6 @@
+@mixin transform($rotate: 0, $translate: translate(0, 0)) {
+  -webkit-transform: $translate rotate(#{$rotate}deg);
+  -ms-transform: $translate rotate(#{$rotate}deg);
+  -o-transform: $translate rotate(#{$rotate}deg);
+  transform: $translate rotate(#{$rotate}deg);
+}

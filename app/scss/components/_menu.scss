@@ -1,35 +1,118 @@
-.menu {
-    display: grid;
-    justify-content: center;
+@use '../config/'as config;
+
+nav {
+	height: 100vh;
 }
 
-.menu__list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+.nav__menu {
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: calc(100% - 5rem);
+	height: 100%;
 
-    color: var(--first-color-600);
+	padding: 0 1rem;
+	background-color: var(--first-color-100);
+	z-index: var(--z-tooltip);
+	transition: .3s;
 
-    margin-top: 10rem;
+	@include config.breakpoint-up(medium) {
+		visibility: visible;
+		left: 0;
+		width: 30rem;
+		padding: 0 2rem;
+	}
+
+	.menu__list {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+
+		color: var(--first-color-600);
+		margin-top: 10rem;
+
+		@include config.breakpoint-up(medium) {
+			align-items: center;
+		}
+	}
+
+	.menu__item {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		width: 100%;
+
+		font-size: var(--medium-font-size);
+		font-weight: var(--font-medium);
+		border-radius: 0.3rem;
+		padding: 1.2rem 1.5rem;
+
+		transition: all 0.2s;
+		cursor: pointer;
+
+		.menu__link,
+		svg path {
+			transition: 0.2s;
+		}
+
+		&:hover {
+			background: var(--first-color-400);
+
+			svg path {
+				fill: var(--third-color-100);
+			}
+
+			.menu__link {
+				color: var(--third-color-100);
+			}
+		}
+	}
+
+	&.show-menu {
+		visibility: visible;
+		left: 0;
+	}
 }
 
-.menu__link {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
-    
-    width: 100%;
-    padding: 1rem 2.5rem;
-    border-radius: 5px;
-    
-    transition: 0.3s;
-    cursor: pointer;
-   
-    &:hover {
-        background: var(--first-color-400);
-        color: var(--third-color-100);
-    }
+.menu__open {
+	position: absolute;
+	top: 1rem;
+
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.5rem;
+	padding: 1rem 0;
+	left: 2rem;
+	z-index: var(--z-fixed);
+	cursor: pointer;
+
+	@include config.breakpoint-up(medium) {
+		display: none;
+	}
+
+	span {
+		display: block;
+		width: 3rem;
+		height: 0.3rem;
+		background-color: var(--first-color-700);
+		border-radius: 5px;
+		-webkit-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
+
+	&.active {
+		.line:nth-child(2) {
+			opacity: 0;
+		}
+
+		.line:nth-child(1) {
+			@include config.transform(45, translate(0px, 8px));
+		}
+
+		.line:nth-child(3) {
+			@include config.transform(-45, translate(0px, -8px));
+		}
+	}
 }

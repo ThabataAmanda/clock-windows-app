@@ -29,3 +29,15 @@
   --z-fixed: 100;
   --z-tooltip: 10;
 }
+
+.content {
+  padding: 0 2rem;
+  background: var(--first-color-200);
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .content {
+    margin-top: 10rem;
+    padding: 0 6rem;
+  }
+}

@@ -2,13 +2,16 @@
   display: flex;
   flex-direction: column;
   gap: 1.875rem;
+  margin: 0 auto;
 }
 .pomodoro .top-bottons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1.25rem;
 }
-.pomodoro .top-buttons__pomodoro, .pomodoro .top-buttons__short-break, .pomodoro .top-buttons__long-break {
+.pomodoro .top-buttons__pomodoro,
+.pomodoro .top-buttons__short-break,
+.pomodoro .top-buttons__long-break {
   display: flex;
   align-items: center;
   font-size: var(--normal-font-size);

@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.875rem;
+    margin: 0 auto;
 
     .top-bottons {
         display: grid;
@@ -9,7 +10,9 @@
         gap: 1.25rem;
     }
 
-    .top-buttons__pomodoro, .top-buttons__short-break, .top-buttons__long-break{
+    .top-buttons__pomodoro,
+    .top-buttons__short-break,
+    .top-buttons__long-break {
         display: flex;
         align-items: center;
         font-size: var(--normal-font-size);
@@ -57,7 +60,6 @@
         font-size: var(--h3-font-size);
         cursor: pointer;
     }
-
 }
 
 .container-time_hidden {
