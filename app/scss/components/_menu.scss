@@ -1,4 +1,8 @@
-@use '../config/' as config;
+@use '../config/'as config;
+
+nav {
+	height: 100vh;
+}
 
 .nav__menu {
 	visibility: hidden;
@@ -7,7 +11,7 @@
 	left: -100%;
 	width: calc(100% - 5rem);
 	height: 100%;
-	
+
 	padding: 0 1rem;
 	background-color: var(--first-color-100);
 	z-index: var(--z-tooltip);
@@ -47,7 +51,8 @@
 		transition: all 0.2s;
 		cursor: pointer;
 
-		.menu__link, svg path {
+		.menu__link,
+		svg path {
 			transition: 0.2s;
 		}
 
@@ -73,7 +78,7 @@
 .menu__open {
 	position: absolute;
 	top: 1rem;
-	
+
 	display: flex;
 	flex-direction: column;
 	row-gap: 0.5rem;
@@ -85,7 +90,7 @@
 	@include config.breakpoint-up(medium) {
 		display: none;
 	}
-	
+
 	span {
 		display: block;
 		width: 3rem;
