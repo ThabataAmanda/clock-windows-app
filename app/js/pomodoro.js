@@ -36,3 +36,37 @@ const showLongBreak = () => {
 buttonPomodoro.addEventListener('click', showPomodoro)
 buttonShortBreak.addEventListener('click', showShortBreak)
 buttonLongBreak.addEventListener('click', showLongBreak)
+
+// ===== ------------------------- =====
+
+const buttonStartPomodoro = document.querySelector('[data-js="start-button-pomodoro"]')
+const buttonPausePomodoro = document.querySelector('[data-js="pause"]')
+const buttonResetPomodoro = document.querySelector('[data-js="reset"]')
+const timerPomodoro = document.querySelector('[data-js="count-pomodoro"]')
+
+const startTimer = (duration, timerPomodoro) => {
+    var timer = duration,
+        minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10)
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        timerPomodoro.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration
+        }
+    }, 1000);
+}
+
+buttonStartPomodoro.addEventListener("click", function () {
+    var duration = 60 * 25;
+    var timerPomodoro = document.querySelector(".time");
+    startTimer(duration, timerPomodoro);
+    buttonPausePomodoro.style.display = 'block'
+    buttonResetPomodoro.style.display = 'flex'
+    buttonStartPomodoro.style.display = 'none'
+});

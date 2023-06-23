@@ -1,67 +1,112 @@
 .pomodoro {
-    display: flex;
-    flex-direction: column;
-    gap: 1.875rem;
-    margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 1.875rem;
+	margin: 0 auto;
 
-    .top-bottons {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 1.25rem;
-    }
+	.top-bottons {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 1.25rem;
+	}
 
-    .top-buttons__pomodoro,
-    .top-buttons__short-break,
-    .top-buttons__long-break {
-        display: flex;
-        align-items: center;
-        font-size: var(--normal-font-size);
-        font-weight: var(--font-medium);
-        width: 100%;
-        padding: 1rem 4.5rem;
-        border-radius: 5px;
-        cursor: pointer;
-        justify-content: center;
-        background-color: var(--first-color-300);
-        color: var(--third-color-100);
-    }
+	.top-buttons__pomodoro,
+	.top-buttons__short-break,
+	.top-buttons__long-break {
+		display: flex;
+		align-items: center;
+		font-size: var(--normal-font-size);
+		font-weight: var(--font-medium);
+		width: 100%;
+		padding: 1rem 4.5rem;
+		border-radius: 5px;
+		cursor: pointer;
+		justify-content: center;
+		background-color: var(--first-color-300);
+		color: var(--third-color-100);
+	}
 
-    .top-buttons__pomodoro_selected {
-        background-color: var(--second-color);
-        font-weight: var(--font-semibold);
-        color: var(--first-color-100);
-    }
+	.top-buttons__pomodoro_selected {
+		background-color: var(--second-color);
+		font-weight: var(--font-semibold);
+		color: var(--first-color-100);
+	}
 }
 
 .container-time {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--first-color-300);
-    border-radius: 5px;
-    gap: 1.25rem;
-    width: 800px;
-    height: 385px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--first-color-300);
+	border-radius: 5px;
+	gap: 1.25rem;
+	width: 800px;
+	height: 385px;
 
-    .time {
-        font-size: var(--hour);
-        color: var(--third-color-100);
-        font-weight: var(--font-semibold);
-    }
+	.time {
+		font-size: var(--hour);
+		color: var(--third-color-100);
+		font-weight: var(--font-semibold);
+	}
 
-    .button-start {
-        background-color: var(--second-color);
-        font-weight: var(--font-semibold);
-        color: var(--first-color-300);
-        padding: 1.25rem 3.5rem;
-        border-radius: 5px;
-        text-transform: uppercase;
-        font-size: var(--h3-font-size);
-        cursor: pointer;
-    }
+	.button-start {
+		background-color: var(--second-color);
+	}
+
+	.button-start,
+	.button-pause {
+		font-weight: var(--font-semibold);
+		color: var(--first-color-300);
+		padding: 1.25rem 3.5rem;
+		border-radius: 5px;
+		text-transform: uppercase;
+		font-size: var(--h3-font-size);
+		cursor: pointer;
+		transition:0.5s;
+	}
+
+	.button-start:hover {
+		background-color: #569bd1;
+	}
+
+	.button-pause:hover {
+		background-color: #696969;
+	}
+
+	.box-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	.button-pause {
+		background-color: var(--first-color-600);
+		display: none;
+	}
+
+	.button-reset {
+		background-color: var(--first-color-500);
+		border-radius: 100%;
+		cursor: pointer;
+		width: 3rem;
+		height: 3rem;
+		display: none;
+		align-items: center;
+		justify-content: center;	
+		transition:0.5s;
+	}
+
+	.button-reset:hover {
+		background-color: var(--first-color-600);
+	}
+
+	.reset-ico {
+		width: 2rem;
+	}
 }
 
 .container-time_hidden {
-    display: none;
+	display: none;
 }
