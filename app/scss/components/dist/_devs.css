@@ -1,0 +1,87 @@
+.devs {
+  display: grid;
+  grid-template-columns: 385px 385px;
+  gap: 1.875rem;
+  margin: 0 auto;
+}
+.devs .container-dev {
+  background: rgba(50, 50, 50, 0.5);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  height: 545px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(60px);
+  justify-content: space-between;
+  padding: 2rem;
+}
+.devs .container-dev__icon {
+  width: 190px;
+  height: 120px;
+  display: flex;
+  background: rgba(50, 50, 50, 0.5);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  backdrop-filter: blur(60px);
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: -55px;
+}
+.devs .container-dev__name {
+  font-weight: var(--font-bold);
+  color: var(--third-color-100);
+  font-size: var(--h1-font-size);
+}
+.devs .container-dev__phrase {
+  font-size: var(--normal-font-size);
+  color: var(--third-color-100);
+  font-weight: var(--font-normal);
+}
+.devs .container-dev__technologies {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+.devs .container-dev__technologies .part-one,
+.devs .container-dev__technologies .parte-two {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+}
+.devs .container-dev__technologies .part-one img,
+.devs .container-dev__technologies .parte-two img {
+  width: 5rem;
+  transition: 1s;
+}
+.devs .container-dev__technologies .part-one .fig,
+.devs .container-dev__technologies .parte-two .fig {
+  width: 3.4rem;
+}
+.devs .container-dev__technologies .part-one img:hover,
+.devs .container-dev__technologies .parte-two img:hover {
+  transform: scale(1.1);
+}
+.devs .container-dev__links {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+}
+.devs .container-dev__links img {
+  transition: 1s;
+}
+.devs .container-dev__links img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 800px) {
+  .devs {
+    grid-template-columns: 385px;
+    gap: 10rem;
+    margin-bottom: 5rem;
+  }
+}
