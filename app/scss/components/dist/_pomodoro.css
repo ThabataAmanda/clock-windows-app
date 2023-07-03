@@ -46,11 +46,17 @@
   color: var(--third-color-100);
   font-weight: var(--font-semibold);
 }
-.container-time .button-start {
+.container-time .box-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.container-time .box-button .button-start {
   background-color: var(--second-color);
 }
-.container-time .button-start,
-.container-time .button-pause {
+.container-time .box-button .button-start,
+.container-time .box-button .button-pause {
   font-weight: var(--font-semibold);
   color: var(--first-color-300);
   padding: 1.25rem 3.5rem;
@@ -60,23 +66,17 @@
   cursor: pointer;
   transition: 0.5s;
 }
-.container-time .button-start:hover {
+.container-time .box-button .button-start:hover {
   background-color: #569bd1;
 }
-.container-time .button-pause:hover {
+.container-time .box-button .button-pause:hover {
   background-color: #696969;
 }
-.container-time .box-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-.container-time .button-pause {
+.container-time .box-button .button-pause {
   background-color: var(--first-color-600);
   display: none;
 }
-.container-time .button-reset {
+.container-time .box-button .button-reset {
   background-color: var(--first-color-500);
   border-radius: 100%;
   cursor: pointer;
@@ -87,10 +87,14 @@
   justify-content: center;
   transition: 0.5s;
 }
-.container-time .button-reset:hover {
+.container-time .box-button .button-return {
+  display: none;
+  cursor: pointer;
+}
+.container-time .box-button .button-reset:hover {
   background-color: var(--first-color-600);
 }
-.container-time .reset-ico {
+.container-time .box-button .reset-ico {
   width: 2rem;
 }
 
