@@ -3,6 +3,7 @@
   grid-template-columns: 385px 385px;
   gap: 1.875rem;
   margin: 0 auto;
+  margin-bottom: 4rem;
 }
 .devs .container-dev {
   background: rgba(50, 50, 50, 0.5);
