@@ -37,8 +37,7 @@ buttonPomodoro.addEventListener('click', showPomodoro)
 buttonShortBreak.addEventListener('click', showShortBreak)
 buttonLongBreak.addEventListener('click', showLongBreak)
 
-// ===== ------------------------- =====
-
+// ===== -----------Pomodoro 25----------- =====
 const buttonStartPomodoro = document.querySelector('[data-js="start-button-pomodoro"]')
 const buttonPausePomodoro = document.querySelector('[data-js="pause"]')
 const buttonResetPomodoro = document.querySelector('[data-js="reset"]')
@@ -64,9 +63,43 @@ const startTimer = (duration, timerPomodoro) => {
 
 buttonStartPomodoro.addEventListener("click", function () {
     var duration = 60 * 25;
-    var timerPomodoro = document.querySelector(".time");
+    var timerPomodoro = document.querySelector('[data-js="count-pomodoro"]');
     startTimer(duration, timerPomodoro);
     buttonPausePomodoro.style.display = 'block'
     buttonResetPomodoro.style.display = 'flex'
     buttonStartPomodoro.style.display = 'none'
 });
+// ===== ---------------------- =====
+// ===== -----------Pomodoro 25----------- =====
+const buttonStartShortBreak = document.querySelector('[data-js="start-button-short-break"]')
+const buttonPauseShortBreak = document.querySelector('[data-js="pause-short-break"]')
+const buttonReturnPomodoro = document.querySelector('[data-js="return-to-pomodoro"]')
+// const timerShortBreak = document.querySelector('[data-js="count-pause-short-break"]')
+
+const startShortBreak = (duration, timerShortBreak) => {
+    var timerBreak = duration,
+        minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timerBreak / 60, 10)
+        seconds = parseInt(timerBreak % 60, 10)
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        timerBreakPomodoro.textContent = minutes + ":" + seconds;
+
+        if (--timerBreak < 0) {
+            timerBreak = duration
+        }
+    }, 1000);
+}
+
+buttonStartShortBreak.addEventListener("click", function () {
+    var duration = 60 * 5;
+    var timerShortBreak = document.querySelector('[data-js="count-pause-short-break"]');
+    startTimer(duration, timerShortBreak);
+    buttonPauseShortBreak.style.display = 'block'
+    buttonReturnPomodoro.style.display = 'flex'
+    buttonStartShortBreak.style.display = 'none'
+});
+// ===== ---------------------- =====
