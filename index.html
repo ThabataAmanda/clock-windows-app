@@ -279,7 +279,7 @@
         </div>
       </section>
 
-      <section class="pomodoro">
+      <section class="pomodoro" style="display: none;">
         <div class="top-bottons">
           <span class="top-buttons__pomodoro top-buttons__pomodoro_selected" data-js="button-pomodoro">Pomodoro</span>
           <span class="top-buttons__short-break" data-js="button-short-break">Pausa Curta</span>
@@ -287,20 +287,96 @@
         </div>
 
         <div class="container-time" data-js="container-pomodoro">
-          <span class="time">25:00</span>
-          <span class="button-start">Start</span>
+          <p class="time" data-js="count-pomodoro">25:00</p>
+          <div class="box-button">
+            <span class="button-start" data-js="start-button-pomodoro">Start</span>
+            <span class="button-pause" data-js="pause">Pause</span>
+            <span class="button-reset" data-js="reset">
+              <svg class="reset-ico" width="20px" height="20px" viewBox="0 0 21 21">
+                <g fill="none" fill-rule="evenodd" stroke="#ffff" stroke-linecap="round" stroke-linejoin="round"
+                  transform="matrix(0 1 1 0 2.5 2.5)">
+                  <path
+                    d="m3.98652376 1.07807068c-2.38377179 1.38514556-3.98652376 3.96636605-3.98652376 6.92192932 0 4.418278 3.581722 8 8 8s8-3.581722 8-8-3.581722-8-8-8" />
+                  <path d="m4 1v4h-4" transform="matrix(1 0 0 -1 0 6)" />
+                </g>
+              </svg></span>
+          </div>
         </div>
 
         <div class="container-time container-time_hidden" data-js="container-short-break">
-          <span class="time">5:00</span>
-          <span class="button-start">Start</span>
+          <p class="time" data-js="count-pause-five">05:00</p>
+          <div class="box-button">
+            <span class="button-start" data-js="start-button-pause-five">Start</span>
+            <span class="button-pause" data-js="pause-button-pause-five">Pause</span>
+          </div>
         </div>
 
         <div class="container-time container-time_hidden" data-js="container-long-break">
-          <span class="time">15:00</span>
-          <span class="button-start">Start</span>
+          <p class="time" data-js="count-pause-fifteen">15:00</p>
+          <div class="box-button">
+            <span class="button-start" data-js="start-button-pause-fifteen">Start</span>
+            <span class="button-pause" data-js="pause-button-pause-fifteen">Pause</span>
+          </div>
         </div>
+
       </section>
+
+      <setion class="devs" style="display: none;">
+        <div class="container-dev">
+          <div class="container-dev__icon">
+            <div>
+              <img src="app/img/Roger-svg.svg" alt="avatar-roger">
+            </div>
+          </div>
+          <span class="container-dev__name">Roger</span>
+          <span class="container-dev__phrase">Desenvolvedor Front-end</span>
+          <div class="container-dev__technologies">
+            <div class="part-one">
+              <img src="app/img/technologies/html.svg" alt="icon-html">
+              <img src="app/img/technologies/css.svg" alt="icon-css">
+              <img src="app/img/technologies/js.svg" alt="icon-js">
+              <img src="app/img/technologies/vue.svg" alt="icon-vue">
+            </div>
+            <div class="parte-two">
+              <img src="app/img/technologies/sass.svg" alt="icon-sass">
+              <img src="app/img/technologies/git.svg" alt="icon-git">
+              <img src="app/img/technologies/bootstrap.svg" alt="icon-bootstrap">
+              <img class="fig" src="app/img/technologies/figma.svg" alt="icon-figma">
+            </div>
+          </div>
+          <div class="container-dev__links">
+            <a href="https://www.linkedin.com/in/rogersanttoss" target=”_blank”><img src="app/img/linkedin.svg" alt="linkedin-icon"></a>
+            <a href="https://github.com/santos2408" target=”_blank”><img src="app/img/github.svg" alt="github-icon"></a>
+          </div>
+        </div>
+        <div class="container-dev">
+          <div class="container-dev__icon">
+            <div>
+              <img src="app/img/Thabata-svg.svg" alt="avatar-thabata">
+            </div>
+          </div>
+          <span class="container-dev__name">Thabata</span>
+          <span class="container-dev__phrase">Desenvolvedora Front-end | UI Designer</span>
+          <div class="container-dev__technologies">
+            <div class="part-one">
+              <img src="app/img/technologies/html.svg" alt="icon-html">
+              <img src="app/img/technologies/css.svg" alt="icon-css">
+              <img src="app/img/technologies/js.svg" alt="icon-js">
+            </div>
+            <div class="parte-two">
+              <img src="app/img/technologies/sass.svg" alt="icon-sass">
+              <img src="app/img/technologies/git.svg" alt="icon-git">
+              <img src="app/img/technologies/bootstrap.svg" alt="icon-bootstrap">
+              <img class="fig" src="app/img/technologies/figma.svg" alt="icon-figma">
+            </div>
+          </div>
+          <div class="container-dev__links">
+            <a href="https://www.linkedin.com/in/thabataamandagomide/" target=”_blank”><img src="app/img/linkedin.svg"
+                alt="linkedin-icon"></a>
+            <a href="https://github.com/ThabataAmanda" target=”_blank”><img src="app/img/github.svg" alt="github-icon"></a>
+          </div>
+        </div>
+      </setion>
     </main>
   </div>
 
