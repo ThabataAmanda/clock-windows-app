@@ -7,4 +7,6 @@
 [ ] Quando terminar os 25min, ir para aba de pausa curta
 [ ] Som quando finalizar o timer
 
+[ ] link da area de desenvolvedores no menu
+
 
