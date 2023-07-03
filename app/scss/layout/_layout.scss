@@ -15,9 +15,9 @@
     grid-template-rows: auto;
   }
 
-  @include config.breakpoint-up(xxl) {
-    height: 100vh;
-  }
+  // @include config.breakpoint-up(xxl) {
+  //   height: 100vh;
+  // }
 }
 
 .main {
