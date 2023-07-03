@@ -1,7 +1,7 @@
 @use '../config/queries' as config;
 
 .alarm__container {
-  display: grid;
+  display: none;
   grid-template-columns: 1fr;
   gap: 1.5rem;
 
@@ -13,6 +13,10 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
+}
+
+.alarm__container.active-panel {
+  display: grid;
 }
 
 .alarm__card {
@@ -33,14 +37,14 @@
         font-weight: var(--font-bold);
       }
     }
-  
+
     span {
       display: flex;
       align-items: center;
       margin-bottom: 1.5rem;
       gap: 1rem;
     }
-  
+
     h2 {
       margin-bottom: 1.5rem;
       font-size: var(--h2-font-size);
@@ -57,7 +61,7 @@
     span {
       flex: 1;
       text-align: center;
-      
+
       background: var(--first-color-500);
       border-radius: 5px;
       padding: 3px 5px;

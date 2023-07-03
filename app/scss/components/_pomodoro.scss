@@ -1,6 +1,6 @@
 .pomodoro {
-	display: flex;
-	flex-direction: column;
+	display: none;
+	grid-template-rows: 40px auto;
 	gap: 1.875rem;
 	margin: 0 auto;
 
@@ -31,6 +31,10 @@
 		font-weight: var(--font-semibold);
 		color: var(--first-color-100);
 	}
+}
+
+.pomodoro.active-panel {
+	display: grid;
 }
 
 .container-time {
