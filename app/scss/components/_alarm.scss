@@ -1,17 +1,28 @@
 @use '../config/queries' as config;
 
 .alarm__container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+  display: none;
+}
 
-  @include config.breakpoint-up(large) {
+.alarm__container.active-panel {
+  display: grid;
+}
+
+.alarm-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+
+  @include config.breakpoint-down(b3) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include config.breakpoint-down(b2) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @include config.breakpoint-up(xxl) {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+  @include config.breakpoint-down(b1) {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -33,14 +44,14 @@
         font-weight: var(--font-bold);
       }
     }
-  
+
     span {
       display: flex;
       align-items: center;
       margin-bottom: 1.5rem;
       gap: 1rem;
     }
-  
+
     h2 {
       margin-bottom: 1.5rem;
       font-size: var(--h2-font-size);
@@ -57,7 +68,7 @@
     span {
       flex: 1;
       text-align: center;
-      
+
       background: var(--first-color-500);
       border-radius: 5px;
       padding: 3px 5px;
